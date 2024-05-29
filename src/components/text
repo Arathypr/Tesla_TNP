@@ -1,0 +1,102 @@
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import { navLinks } from "./constant/index";
+import nav1 from "../assets/images/nav1.png";
+import nav2 from "../assets/images/nav2.png";
+import nav3 from "../assets/images/nav3.png";
+
+const CarDetails = () => {
+  const { id } = useParams();
+  const car = navLinks.find((car) => car.id === id);
+  // const [selectedColor, setSelectedColor] = useState("default");
+
+  if (!car) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <h1 className="text-3xl font-bold">Car not found</h1>
+      </div>
+    );
+  }
+
+  // const handleColorChange = (color) => {
+  //   setSelectedColor(color);
+  // };
+
+  // const getColorImage = (color) => {
+  //   // Logic to return the image based on color selection
+  //   switch (color) {
+  //     case "red":
+  //       return nav1;
+  //     case "black":
+  //       return nav3;
+  //     case "blue":
+  //       return nav2;
+  //     default:
+  //       return car.img;
+  //   }
+  // };
+
+  return (
+    <div className="container mx-auto p-6">
+      <h1 className="text-4xl font-bold mb-4">{car.title}</h1>
+      <p className="text-xl mb-4">{car.desc}</p>
+      <p className="text-xl font-semibold mb-4">Price: $50,000</p>
+      {/* <p className="text-lg mb-4">
+        Available Variants: Standard, Long Range, Performance
+      </p> */}
+      {/* <div className="mb-6">
+        <h3 className="text-2xl font-semibold mb-2">Select Color:</h3>
+        <div className="flex space-x-4">
+          <button
+            onClick={() => handleColorChange("red")}
+            className={`p-2 rounded transition ${
+              selectedColor === "red"
+                ? "bg-red-600 text-white"
+                : "bg-red-500 text-white hover:bg-red-600"
+            }`}
+          >
+            Red
+          </button>
+          <button
+            onClick={() => handleColorChange("blue")}
+            className={`p-2 rounded transition ${
+              selectedColor === "white"
+                ? "bg-slate-200 text-white"
+                : "bg-slate-200 text-white hover:bg-blue-600"
+            }`}
+          >
+            White
+          </button>
+          <button
+            onClick={() => handleColorChange("black")}
+            className={`p-2 rounded transition ${
+              selectedColor === "blue"
+                ? "bg-blue-600 text-white"
+                : "bg-blue-500 text-white hover:bg-blue-600"
+            }`}
+          >
+            Blue
+          </button>
+        </div>
+          </div>*/}
+      <div className="flex justify-center mb-6">
+        <img
+          // src={getColorImage(selectedColor)}
+          src={car.imgbg}
+          alt={car.title}
+          className="h-screen w-full object-cover"
+        />
+      </div>
+      {/* <div className="flex justify-center">
+        <button
+          onClick={() => alert("Navigate to Build and Price page")}
+          className="p-4 bg-blue-500 text-white text-lg font-semibold rounded hover:bg-blue-600 transition"
+        >
+          Build and Price
+        </button>
+      </div>  */}
+    </div>
+  );
+};
+
+export default CarDetails;
