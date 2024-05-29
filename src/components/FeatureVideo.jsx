@@ -1,4 +1,4 @@
-// FeaturedVideo.jsx
+
 import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,7 +8,7 @@ import Driving from "../assets/images/driving.mp4";
 import Autopark from "../assets/images/Autopark.mp4";
 import Carvideo from "../assets/images/carvideo.mp4";
 
-// Slider settings
+
 const settings = {
   dots: true,
   infinite: true,
@@ -37,7 +37,6 @@ const settings = {
   ],
 };
 
-// Data for slides
 const data = [
   {
     videoSrc: Driving,

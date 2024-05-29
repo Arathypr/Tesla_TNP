@@ -4,8 +4,8 @@ import section1 from "../assets/images/section1.png";
 import section2 from "../assets/images/section2.png";
 import section3 from "../assets/images/section3.png";
 
-import useInView from "./useView"; // import the custom hook
-import useWindowSize from "./useWindowSize.jsx"; // import the window size hook
+import useInView from "./useView";
+import useWindowSize from "./useWindowSize.jsx";
 
 function Detail() {
   const section1TextRef = useRef(null);
@@ -32,9 +32,7 @@ function Detail() {
     <>
       {/* bigger screen */}
       <div className=" sm:block vvsm:hidden mx-auto p-4 bg-black text-white text-opacity-35">
-        {/* First Section */}
         <div className="flex flex-col md:flex-row mb-8">
-          {/* Image */}
           <motion.div
             ref={section1ImageRef}
             initial={{ opacity: 0, y: 50 }}
@@ -46,7 +44,6 @@ function Detail() {
           >
             <img src={section1} alt="Section 1" className="w-full h-auto" />
           </motion.div>
-          {/* Text */}
           <motion.div
             ref={section1TextRef}
             initial={{ opacity: 0, y: 50 }}
@@ -65,10 +62,8 @@ function Detail() {
             </p>
           </motion.div>
         </div>
-        {/* Second Section */}
 
         <div className=" flex flex-col md:flex-row mb-8">
-          {/* Text */}
           <motion.div
             ref={section2TextRef}
             initial={{ opacity: 0, y: 50 }}
@@ -86,7 +81,7 @@ function Detail() {
               alias!
             </p>
           </motion.div>
-          {/* Image */}
+
           <motion.div
             ref={section2ImageRef}
             initial={{ opacity: 0, y: 50 }}
@@ -99,9 +94,7 @@ function Detail() {
             <img src={section2} alt="Section 2" className="w-full h-auto" />
           </motion.div>
         </div>
-        {/* Third Section */}
         <div className="flex flex-col md:flex-row">
-          {/* Image */}
           <motion.div
             ref={section3ImageRef}
             initial={{ opacity: 0, y: 50 }}
@@ -113,7 +106,7 @@ function Detail() {
           >
             <img src={section3} alt="Section 3" className="w-full h-auto" />
           </motion.div>
-          {/* Text */}
+
           <motion.div
             ref={section3TextRef}
             initial={{ opacity: 0, y: 50 }}
@@ -135,13 +128,11 @@ function Detail() {
       </div>
       {/* smaller screen */}
       <div className=" sm:hidden vvsm:block mx-auto p-4 bg-black text-white text-opacity-35">
-        {/* First Section */}
         <div className="flex flex-col md:flex-row mb-8">
-          {/* Image */}
           <div className="md:w-1/2 mr-4">
             <img src={section1} alt="Section 1" className="w-full h-auto" />
           </div>
-          {/* Text */}
+
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -160,9 +151,8 @@ function Detail() {
             </p>
           </motion.div>
         </div>
-        {/* Second Section */}
+
         <div className="flex flex-col md:flex-row mb-8">
-          {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -180,18 +170,17 @@ function Detail() {
               alias!
             </p>
           </motion.div>
-          {/* Image */}
+
           <div className="md:w-1/2 order-1 md:order-2">
             <img src={section2} alt="Section 2" className="w-full h-auto" />
           </div>
         </div>
-        {/* Third Section */}
+
         <div className="flex flex-col md:flex-row">
-          {/* Image */}
           <div className="md:w-1/2 mr-4">
             <img src={section3} alt="Section 3" className="w-full h-auto" />
           </div>
-          {/* Text */}
+
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}

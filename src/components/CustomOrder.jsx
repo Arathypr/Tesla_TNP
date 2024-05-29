@@ -13,7 +13,7 @@ import AutoPark from "./AutoPark";
 function CustomerOrder() {
   const [isFeatureVisible, setIsFeatureVisible] = useState(false);
   const [sliderImages, setSliderImages] = useState([]);
-  const [selectedColor, setSelectedColor] = useState("RED"); // Default color
+  const [selectedColor, setSelectedColor] = useState("RED"); 
 
   useEffect(() => {
     fetchSliderImages(selectedColor);

@@ -30,7 +30,7 @@ const Navbar = () => {
     }
 
     return () => {
-      document.body.style.overflow = "auto"; // Clean up on component unmount
+      document.body.style.overflow = "auto"; 
     };
   }, [location.pathname]);
 
@@ -48,7 +48,7 @@ const Navbar = () => {
     <>
       <nav className="w-full">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          {/* Logo */}
+      
           <div className="flex items-center">
             <Link to="/">
               <img
@@ -59,7 +59,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Center sections (hidden on auth pages) */}
+          
           {!isAuthPage && (
             <div className="hidden lg:flex flex-1 justify-center space-x-8 pr-[350px] font-Poppins text-sm">
               <Link to="/vehicles" onClick={handleNavLinkClick}>
@@ -86,7 +86,6 @@ const Navbar = () => {
             </div>
           )}
 
-          {/* Right side icons for desktop */}
           <div className="hidden lg:flex space-x-6">
             <img src={help} alt="Help" className="h-6" />
             <img src={places} alt="Places" className="h-6" />
@@ -95,7 +94,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+      
           <div className="lg:hidden flex items-center">
             <button onClick={handleMenuClick}>
               {menuOpen ? (
@@ -107,7 +106,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
+      
         {menuOpen && (
           <div className="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center">
             <button

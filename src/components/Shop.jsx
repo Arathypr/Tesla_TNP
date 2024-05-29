@@ -16,10 +16,8 @@ function Shop() {
       );
       const data = await response.json();
 
-      // Exclude the last item from the data array
       const allItemsExceptLast = data.slice(0, -1);
 
-      // Get the last 5 items from the remaining data
       const lastFiveItems = allItemsExceptLast.slice(-5);
 
       setItems(lastFiveItems);

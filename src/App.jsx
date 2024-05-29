@@ -36,7 +36,6 @@ const App = () => {
           <Route path="/custom-order" element={<CustomOrder />} />
           <Route path="/demo-drive" element={<DemoDrive />} />
           <Route path="/feature" element={<FeatureSlide />} />{" "}
-          {/* Add route for CarDetails */}
         </Routes>
         <ConditionalHero />
         <ChatBot />

@@ -3,15 +3,15 @@ import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 
 const theme = {
-  background: "#ffffff", // White background
+  background: "#ffffff",
   fontFamily: "Arial, Helvetica, sans-serif",
-  headerBgColor: "	#99A3A4", // Tesla Red for header
-  headerFontColor: "#ffffff", // White text for header
+  headerBgColor: "	#99A3A4", 
+  headerFontColor: "#ffffff", 
   headerFontSize: "15px",
-  botBubbleColor: "#99A3A4", // Tesla Red for bot messages
-  botFontColor: "#ffffff", // White text for bot messages
-  userBubbleColor: "#99A3A4", // Dark gray for user messages
-  userFontColor: "#ffffff", // White text for user messages
+  botBubbleColor: "#99A3A4", 
+  botFontColor: "#ffffff",
+  userBubbleColor: "#99A3A4",
+  userFontColor: "#ffffff", 
 };
 
 function Chat() {

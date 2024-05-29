@@ -6,17 +6,14 @@ import footersolar2 from "../../assets/images/imagesolar3.png";
 import footersolar3 from "../../assets/images/roofsolar.png";
 
 function SolarDetail() {
-  // State to manage which image is currently selected
-  const [selectedImage, setSelectedImage] = useState(footersolar1); // Initially set to the first image
-  const [activeText, setActiveText] = useState(1); // Active text index, initially set to the first text
+  const [selectedImage, setSelectedImage] = useState(footersolar1);
+  const [activeText, setActiveText] = useState(1);
 
-  // Function to handle text click and set the selected image and active text
   const handleTextClick = (image, index) => {
     setSelectedImage(image);
     setActiveText(index);
   };
 
-  // Variants for animation
   const animationVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -25,7 +22,6 @@ function SolarDetail() {
   return (
     <div className="flex flex-col lg:flex-row justify-center items-center h-screen bg-black text-white px-4 vvsm:pt-10 lg:px-20">
       <div className="lg:w-1/2 flex flex-col justify-center px-4">
-        {/* Example text elements */}
         <motion.p
           className={`cursor-pointer mb-2 py-2 px-4 rounded text-sm lg:text-base lg:w-[80%] ${
             activeText === 1 ? "bg-gray-700 bg-opacity-45" : ""
@@ -88,9 +84,8 @@ function SolarDetail() {
         </motion.p>
       </div>
       <div className="lg:w-1/2 p-4 relative">
-        {/* Render the selected image */}
         <motion.img
-          key={selectedImage} // Add key prop to trigger animation when image changes
+          key={selectedImage}
           src={selectedImage}
           alt="Selected"
           className="lg:w-[80%] vvsm-w-full h-[50vh]"

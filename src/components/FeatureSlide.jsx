@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Import images
+
 import sliderimg1 from "../assets/images/slideimg1.png";
 import sliderimg2 from "../assets/images/sliderimg2.png";
 import sliderimg3 from "../assets/images/sliderimg3.png";
@@ -12,7 +12,7 @@ import sliderimg4 from "../assets/images/sliderimg4.png";
 import sliderimg5 from "../assets/images/sliderimg5.png";
 import sliderimg6 from "../assets/images/sliderimg6.png";
 
-// Slider settings
+
 const settings = {
   dots: true,
   infinite: true,
@@ -41,7 +41,6 @@ const settings = {
   ],
 };
 
-// Data for slides
 const data = [
   {
     img: sliderimg1,
