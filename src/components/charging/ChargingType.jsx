@@ -1,7 +1,7 @@
 import React from "react";
-import Image1 from "../assets/images/trip.jpg";
-import Image2 from "../assets/images/sleep.jpg";
-import Image3 from "../assets/images/day.jpg";
+import Image1 from "../../assets/images/trip.jpg";
+import Image2 from "../../assets/images/sleep.jpg";
+import Image3 from "../../assets/images/day.jpg";
 import HomeCharging from "./HomeCharging";
 
 function ChargingType() {

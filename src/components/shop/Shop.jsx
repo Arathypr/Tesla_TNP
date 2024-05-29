@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Copyright from "./Copyright";
+import Copyright from "../Copyright";
 function Shop() {
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);

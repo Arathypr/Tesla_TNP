@@ -30,7 +30,7 @@ const Navbar = () => {
     }
 
     return () => {
-      document.body.style.overflow = "auto"; 
+      document.body.style.overflow = "auto";
     };
   }, [location.pathname]);
 
@@ -46,9 +46,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full">
+      <nav className="w-full ">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-      
           <div className="flex items-center">
             <Link to="/">
               <img
@@ -59,29 +58,33 @@ const Navbar = () => {
             </Link>
           </div>
 
-          
           {!isAuthPage && (
-            <div className="hidden lg:flex flex-1 justify-center space-x-8 pr-[350px] font-Poppins text-sm">
+            <div className="hidden lg:flex flex-1 justify-center space-x-8 pr-[350px] font-mono font-semibold text-lg">
               <Link to="/vehicles" onClick={handleNavLinkClick}>
-                <span className="text-gray-800 hover:text-gray-600">
+                <span className="text-gray-800  relative  w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-blue-300">
                   Vehicles
                 </span>
               </Link>
               <Link to="/energy" onClick={handleNavLinkClick}>
-                <a href="#energy" className="text-gray-800 hover:text-gray-600">
+                <a
+                  href="#energy"
+                  className="text-gray-800 relative  w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-blue-300"
+                >
                   Energy
                 </a>{" "}
               </Link>
               <Link to="/charging" onClick={handleNavLinkClick}>
                 <a
                   href="#charging"
-                  className="text-gray-800 hover:text-gray-600"
+                  className="text-gray-800 relative  w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-blue-300"
                 >
                   Charging
                 </a>{" "}
               </Link>
               <Link to="/shop" onClick={handleNavLinkClick}>
-                <span className="text-gray-800 hover:text-gray-600">Shop</span>
+                <span className="text-gray-800 relative  w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-blue-300">
+                  Shop
+                </span>
               </Link>
             </div>
           )}
@@ -94,7 +97,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-      
           <div className="lg:hidden flex items-center">
             <button onClick={handleMenuClick}>
               {menuOpen ? (
@@ -106,7 +108,6 @@ const Navbar = () => {
           </div>
         </div>
 
-      
         {menuOpen && (
           <div className="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center">
             <button
@@ -115,7 +116,7 @@ const Navbar = () => {
             >
               <XMarkIcon className="h-8 w-8 text-gray-800" />
             </button>
-            <div className="px-10 pt-10 pb-4 flex flex-col space-y-8 font-mono text-center ">
+            <div className="px-10 pt-10 pb-4 flex flex-col space-y-8  font-mono text-lg font-semibold text-center ">
               <Link to="/vehicles" onClick={handleNavLinkClick}>
                 <span className="text-gray-800 hover:text-gray-600 p-2">
                   Vehicles

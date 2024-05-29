@@ -4,3 +4,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "GothamSSm";
+  src: local("GothamSSm"), url(./assets/Font/GothamSSm);
+}
+.GothamSSm {
+  font-family: "Inter-Light-BETA";
+}

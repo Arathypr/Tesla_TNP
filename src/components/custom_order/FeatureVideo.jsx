@@ -1,13 +1,11 @@
-
 import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Driving from "../assets/images/driving.mp4";
-import Autopark from "../assets/images/Autopark.mp4";
-import Carvideo from "../assets/images/carvideo.mp4";
-
+import Driving from "../../assets/images/driving.mp4";
+import Autopark from "../../assets/images/Autopark.mp4";
+import Carvideo from "../../assets/images/carvideo.mp4";
 
 const settings = {
   dots: true,

@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Vehicles() {
-  const [cars, setCars] = useState([]);
+  const [allCars, setAllCars] = useState([]);
+  const [displayedCars, setDisplayedCars] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
   const itemsPerPage = 5;
 
   useEffect(() => {
@@ -14,7 +13,7 @@ function Vehicles() {
 
   useEffect(() => {
     applyFilters();
-  }, [page, searchTerm]);
+  }, [searchTerm]);
 
   const fetchCars = async () => {
     try {
@@ -22,34 +21,22 @@ function Vehicles() {
         "http://localhost:8080/api/imageDetails/getAllImageDetails"
       );
       const data = await response.json();
-      setCars(data.slice(0, itemsPerPage));
-
-      setHasMore(data.length > itemsPerPage);
+      setAllCars(data.slice(0, itemsPerPage)); // Only take the first 5 items
+      setDisplayedCars(data.slice(0, itemsPerPage)); // Set the displayed cars to the first 5 items
     } catch (error) {
       console.error("Error fetching car details:", error);
     }
   };
 
   const applyFilters = () => {
-    setPage(1);
-    const filteredCars = cars
-      .filter((car) =>
-        car.title.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-      .slice(0, itemsPerPage);
-
-    setCars(filteredCars);
-    setHasMore(filteredCars.length < cars.length);
+    const filtered = allCars.filter((car) =>
+      car.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setDisplayedCars(filtered); // Set displayed cars to filtered results
   };
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
-    applyFilters();
-  };
-
-  const loadMore = () => {
-    setPage((prevPage) => prevPage + 1);
-    fetchCars();
   };
 
   return (
@@ -65,7 +52,7 @@ function Vehicles() {
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {cars.map(({ id, vehicleImages, title, description }) => (
+          {displayedCars.map(({ id, vehicleImages, title, description }) => (
             <Link
               to={`/car/${id}`}
               key={id}

@@ -120,3 +120,15 @@ export const navLinks = [
   },
 ];
 
+// theme.js
+export const theme = {
+  background: "#ffffff",
+  fontFamily: "Arial, Helvetica, sans-serif",
+  headerBgColor: "#333333", // Adjust colors as desired
+  headerFontColor: "#ffffff",
+  headerFontSize: "15px",
+  botBubbleColor: "#2CC9F0", // Tesla blue
+  botFontColor: "#ffffff",
+  userBubbleColor: "#F2F2F2",
+  userFontColor: "#000000",
+};

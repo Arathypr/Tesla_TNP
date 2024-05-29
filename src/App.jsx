@@ -8,18 +8,19 @@ import {
 import Navbar from "./components/Navbar";
 import SignUp from "./components/SignUp";
 import ChatBot from "./components/ChatBot";
-import Hero from "./components/Hero";
+import Hero from "./components/homepage/Hero";
 import Vehicles from "./components/Vehicles";
 import CarDetails from "./components/CarDetails";
 import "./App.css";
-import CustomOrder from "./components/CustomOrder";
+import CustomOrder from "./components/custom_order/CustomOrder";
 import DemoDrive from "./components/DemoDrive";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import FeatureSlide from "./components/FeatureSlide";
-import Shop from "./components/Shop";
-import Charging from "./components/Charging";
+import FeatureSlide from "./components/custom_order/FeatureSlide";
+import Shop from "./components/shop/Shop";
+import Charging from "./components/charging/Charging";
 import Energy from "./components/energy/Energy";
+import "./App.css";
 
 const App = () => {
   return (

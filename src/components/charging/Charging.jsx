@@ -7,7 +7,7 @@ import {
   faWrench,
 } from "@fortawesome/free-solid-svg-icons";
 import ChargingType from "./ChargingType";
-import Copyright from "./Copyright";
+import Copyright from "../Copyright";
 
 function Charging() {
   const [imageDetails, setImageDetails] = useState([]);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Driving from "../assets/images/driving.mp4";
+import Driving from "../../assets/images/driving.mp4";
 import FeaturedVideo from "./FeatureVideo";
 
 function AutoPark() {
@@ -17,7 +17,7 @@ function AutoPark() {
 
   return (
     <div className="flex flex-col md:flex-row mt-8 md:mt-32 font-Poppins p-10">
-      <div className="md:w-3/4 p-4">
+      <div className="md:w-[150%] ">
         <video
           autoPlay
           muted
@@ -27,21 +27,21 @@ function AutoPark() {
         >
           <source src={Driving} type="video/mp4" />
         </video>
-        <p className="text-center mt-2">Navigate on Autopilot</p>
+        <p className="text-center mt-2 ">Navigate on Auto Line</p>
       </div>
       <div className="md:w-1/2 p-4">
         <div>
-          <h2 className="text-center font-semibold text-2xl">
+          <h2 className="text-center font-semibold vvsm:text-xl text-2xl">
             Full Self-Driving <br className="md:hidden" /> Capability
           </h2>
-          <p className="mt-2 text-sm leading-loose">
+          <p className="mt-2 text-sm  vvsm:text-[15px] leading-loose">
             Receive a 30 day trial of Full Self-Driving Capability with a new
             vehicle purchase. Your car will be able to drive itself almost
             anywhere with minimal driver intervention and will continuously
             improve.
           </p>
-          <ul className="mt-2 list-disc list-inside leading-7 text-sm">
-            <li>Navigate on Autopilot</li>
+          <ul className="mt-2 list-disc list-inside leading-7 text-sm vvsm:text-[15px]">
+            <li>Navigate on Auto Line</li>
             <li>Auto Lane Change</li>
             <li>Autopark</li>
             <li>Summon</li>

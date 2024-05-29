@@ -4,8 +4,8 @@ import section1 from "../assets/images/section1.png";
 import section2 from "../assets/images/section2.png";
 import section3 from "../assets/images/section3.png";
 
-import useInView from "./useView";
-import useWindowSize from "./useWindowSize.jsx";
+import useInView from "./customHooks/useView.jsx";
+import useWindowSize from "./customHooks/useWindowSize.jsx";
 
 function Detail() {
   const section1TextRef = useRef(null);

@@ -1,7 +1,7 @@
 import React from "react";
-import universal from "../assets/images/universal.jpg";
-import mobileconnector from "../assets/images/mobileconnector.jpg";
-import wallconnector from "../assets/images/wall connector.jpg";
+import universal from "../../assets/images/universal.jpg";
+import mobileconnector from "../../assets/images/mobileconnector.jpg";
+import wallconnector from "../../assets/images/wall connector.jpg";
 import ChargingFooter from "./ChargingFooter";
 
 function HomeCharging() {
